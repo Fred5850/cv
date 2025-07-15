@@ -29,3 +29,4 @@ jobs:
       with:
         branch: gh-pages        # Deploy branch
         folder: dist/cv  # Output folder from build
+        token: ${{ secrets.GITHUB_TOKEN }} # Repo → Settings → Actions → General → Workflow permissions

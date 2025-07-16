@@ -1,22 +1,36 @@
 <kirby-page>
     <kirby-header [title]="'CV'"></kirby-header>
+
+
+
     <kirby-page-content>
-
-        <kirby-item size="md">
-            <data slot="end" class="kirby-text-bold">1234</data>
-            <kirby-checkbox slot="end"></kirby-checkbox>
-            <kirby-label>
-                <h3>Slot end, aria-label</h3>
-                <p detail>Label</p>
-            </kirby-label>
-            <kirby-icon name="agreement" slot="start"></kirby-icon>
-        </kirby-item>
-
+        <kirby-card [hasPadding]="true">
+            <kirby-item size="xs">
+                <kirby-label>
+                    <h3>jane.doe&#64;example.com</h3>
+                    <p detail>Label</p>
+                </kirby-label>
+                <kirby-icon name="agreement" slot="start"></kirby-icon>
+            </kirby-item>
+            <kirby-item size="xs">
+                <kirby-label>
+                    <h3>+1 234 567 890</h3>
+                    <p detail>Label</p>
+                </kirby-label>
+                <kirby-icon name="agreement" slot="start"></kirby-icon>
+            </kirby-item>
+            <kirby-item size="xs">
+                <kirby-label>
+                    <h3>New York, NY</h3>
+                    <p detail>Label</p>
+                </kirby-label>
+                <data slot="end" class="kirby-text-bold">1234</data>
+                <kirby-checkbox slot="end"></kirby-checkbox>
+                <kirby-icon name="agreement" slot="start"></kirby-icon>
+            </kirby-item>
+        </kirby-card>
     </kirby-page-content>
 
     <kirby-page-footer>
-        <button kirby-button size="lg">
-            text goes here
-        </button>
     </kirby-page-footer>
 </kirby-page>

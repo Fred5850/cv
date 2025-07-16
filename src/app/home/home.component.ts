@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import {  CheckboxComponent, HeaderModule, IconModule, ItemModule, KirbyModule, PageModule } from '@kirbydesign/designsystem';
+import {  CardModule, CheckboxComponent, HeaderModule, IconModule, ItemModule, KirbyModule, PageModule } from '@kirbydesign/designsystem';
 
 @Component({
   imports: [     
@@ -8,6 +8,7 @@ import {  CheckboxComponent, HeaderModule, IconModule, ItemModule, KirbyModule, 
     IconModule,
     CheckboxComponent,
     HeaderModule,
+    CardModule
   ],
   templateUrl: './home.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,

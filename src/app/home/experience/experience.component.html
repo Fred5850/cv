@@ -1,0 +1,37 @@
+<kirby-card variant="outlined" [hasPadding]="true">
+    <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <div>
+                <h3>{{ experience.Title }}</h3>
+                <p detail>{{ experience.CompanyName }}</p>
+            </div>
+            <div>
+                <kirby-label>
+                    <h4>{{ experience.StartTime }} - {{ experience.EndTime }}</h4>
+                </kirby-label>
+            </div>
+        </div>
+        <kirby-divider></kirby-divider>
+        <p>{{ experience.Description }}</p>
+        @if(experience.bullets && experience.bullets.length > 0) {
+        <ul>
+            @for (bullet of experience.bullets; track $index) {
+            <li>{{ bullet }}</li>
+            }
+        </ul>
+        }
+        @if(experience.Skills && experience.Skills.length > 0) {
+        <kirby-divider></kirby-divider>
+        <div>
+            <strong>Skills:</strong>
+            <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+                @for (skill of experience.Skills; track $index) {
+                <kirby-label>
+                    <span>{{ skill }}</span>
+                </kirby-label>
+                }
+            </div>
+        </div>
+        }
+    </div>
+</kirby-card>

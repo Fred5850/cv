@@ -38,6 +38,15 @@
         </kirby-card>
         <br />
         <kirby-card [hasPadding]="true">
+            <h4>Experience</h4>
+            <div>
+                @for (item of experiences; track $index) {
+                <app-experience [experience]="item"></app-experience>
+                }
+            </div>
+        </kirby-card>
+        <br />
+        <kirby-card [hasPadding]="true">
             <h4>Skills</h4>
             <div>
                 <kirby-item>

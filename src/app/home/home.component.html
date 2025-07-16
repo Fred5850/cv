@@ -1,1 +1,22 @@
-<p>home works</p>
+<kirby-page>
+    <kirby-header [title]="'CV'"></kirby-header>
+    <kirby-page-content>
+
+        <kirby-item size="md">
+            <data slot="end" class="kirby-text-bold">1234</data>
+            <kirby-checkbox slot="end"></kirby-checkbox>
+            <kirby-label>
+                <h3>Slot end, aria-label</h3>
+                <p detail>Label</p>
+            </kirby-label>
+            <kirby-icon name="agreement" slot="start"></kirby-icon>
+        </kirby-item>
+
+    </kirby-page-content>
+
+    <kirby-page-footer>
+        <button kirby-button size="lg">
+            text goes here
+        </button>
+    </kirby-page-footer>
+</kirby-page>

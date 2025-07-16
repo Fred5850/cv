@@ -1,9 +1,16 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+import {  CheckboxComponent, HeaderModule, IconModule, ItemModule, KirbyModule, PageModule } from '@kirbydesign/designsystem';
 
 @Component({
-  selector: 'app-home',
-  imports: [],
+  imports: [     
+    PageModule,
+    ItemModule,
+    IconModule,
+    CheckboxComponent,
+    HeaderModule,
+  ],
   templateUrl: './home.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HomeComponent {
 

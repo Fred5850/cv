@@ -1,36 +1,67 @@
 <kirby-page>
     <kirby-header [title]="'CV'"></kirby-header>
 
-
-
     <kirby-page-content>
         <kirby-card [hasPadding]="true">
-            <kirby-item size="xs">
-                <kirby-label>
-                    <h3>jane.doe&#64;example.com</h3>
-                    <p detail>Label</p>
-                </kirby-label>
-                <kirby-icon name="agreement" slot="start"></kirby-icon>
-            </kirby-item>
-            <kirby-item size="xs">
-                <kirby-label>
-                    <h3>+1 234 567 890</h3>
-                    <p detail>Label</p>
-                </kirby-label>
-                <kirby-icon name="agreement" slot="start"></kirby-icon>
-            </kirby-item>
-            <kirby-item size="xs">
-                <kirby-label>
-                    <h3>New York, NY</h3>
-                    <p detail>Label</p>
-                </kirby-label>
-                <data slot="end" class="kirby-text-bold">1234</data>
-                <kirby-checkbox slot="end"></kirby-checkbox>
-                <kirby-icon name="agreement" slot="start"></kirby-icon>
-            </kirby-item>
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <kirby-avatar size="lg" name="Fred5850"
+                    imageSrc="https://randomuser.me/api/portraits/women/44.jpg"></kirby-avatar>
+                <div>
+                    <h3>Fred5850</h3>
+                    <p detail>Fullstack Developer</p>
+                </div>
+            </div>
+            <kirby-divider></kirby-divider>
+            <div>
+                <kirby-item>
+                    <kirby-icon name="mail" slot="start"></kirby-icon>
+                    <kirby-label>
+                        <h3>jane.doe&#64;example.com</h3>
+                        <p detail>Email</p>
+                    </kirby-label>
+                </kirby-item>
+                <kirby-item>
+                    <kirby-icon name="call" slot="start"></kirby-icon>
+                    <kirby-label>
+                        <h3>+45 234 567 890</h3>
+                        <p detail>Phone</p>
+                    </kirby-label>
+                </kirby-item>
+                <kirby-item>
+                    <kirby-icon name="location" slot="start"></kirby-icon>
+                    <kirby-label>
+                        <h3>'Town', Denmark</h3>
+                        <p detail>Location</p>
+                    </kirby-label>
+                </kirby-item>
+            </div>
+        </kirby-card>
+        <br />
+        <kirby-card [hasPadding]="true">
+            <h4>Skills</h4>
+            <div>
+                <kirby-item>
+                    <kirby-label>
+                        <h3>Angular</h3>
+                    </kirby-label>
+                </kirby-item>
+                <kirby-item>
+                    <kirby-label>
+                        <h3>TypeScript</h3>
+                    </kirby-label>
+                </kirby-item>
+                <kirby-item>
+                    <kirby-label>
+                        <h3>Kirby Design System</h3>
+                    </kirby-label>
+                </kirby-item>
+            </div>
         </kirby-card>
     </kirby-page-content>
 
     <kirby-page-footer>
+        <button kirby-button size="lg" appearance="primary">
+            Download CV
+        </button>
     </kirby-page-footer>
 </kirby-page>

@@ -1,18 +1,18 @@
-<kirby-card variant="outlined" [hasPadding]="true">
+<kirby-card themeColor="medium" [hasPadding]="true">
     <div style="display: flex; flex-direction: column; gap: 0.5rem;">
         <div style="display: flex; justify-content: space-between; align-items: center;">
             <div>
-                <h3>{{ experience.Title }}</h3>
-                <p detail>{{ experience.CompanyName }}</p>
+                <h3>{{ experience.title }}</h3>
+                <p detail>{{ experience.companyName }}</p>
             </div>
             <div>
                 <kirby-label>
-                    <h4>{{ experience.StartTime }} - {{ experience.EndTime }}</h4>
+                    <h4>{{ experience.startTime }} - {{ experience.endTime }}</h4>
                 </kirby-label>
             </div>
         </div>
         <kirby-divider></kirby-divider>
-        <p>{{ experience.Description }}</p>
+        <p>{{ experience.description }}</p>
         @if(experience.bullets && experience.bullets.length > 0) {
         <ul>
             @for (bullet of experience.bullets; track $index) {
@@ -20,14 +20,14 @@
             }
         </ul>
         }
-        @if(experience.Skills && experience.Skills.length > 0) {
+        @if(experience.skills && experience.skills.length > 0) {
         <kirby-divider></kirby-divider>
         <div>
             <strong>Skills:</strong>
             <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
-                @for (skill of experience.Skills; track $index) {
+                @for (skill of experience.skills; track $index) {
                 <kirby-label>
-                    <span>{{ skill }}</span>
+                    <kirby-badge>{{ skill }}</kirby-badge>
                 </kirby-label>
                 }
             </div>

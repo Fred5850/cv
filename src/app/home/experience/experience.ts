@@ -1,9 +1,9 @@
 export interface Experience {
-  StartTime: string;
-  EndTime: string;
-  CompanyName: string;
-  Title: string;
-  Description: string;
+  startTime: string;
+  endTime: string;
+  companyName: string;
+  title: string;
+  description: string;
   bullets: string[];
-  Skills: string[];
+  skills: string[];
 }

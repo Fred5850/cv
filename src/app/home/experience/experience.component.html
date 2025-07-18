@@ -22,16 +22,15 @@
         }
         @if(experience.skills && experience.skills.length > 0) {
         <kirby-divider></kirby-divider>
-        <div>
-            <strong>Skills:</strong>
-            <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
-                @for (skill of experience.skills; track $index) {
-                <kirby-label>
-                    <kirby-badge>{{ skill }}</kirby-badge>
-                </kirby-label>
-                }
-            </div>
+
+        <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+            @for (skill of experience.skills; track $index) {
+            <kirby-label>
+                <kirby-badge>{{ skill }}</kirby-badge>
+            </kirby-label>
+            }
         </div>
+
         }
     </div>
 </kirby-card>

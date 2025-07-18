@@ -5,7 +5,7 @@
         <kirby-card class="cv-section" [hasPadding]="true">
             <div style="display: flex; align-items: center; gap: 1rem;">
                 <kirby-avatar size="lg" name="Fred5850"
-                    imageSrc="https://randomuser.me/api/portraits/women/44.jpg"></kirby-avatar>
+                    imageSrc="https://randomuser.me/api/portraits/men/62.jpg"></kirby-avatar>
                 <div>
                     <h3>Fred5850</h3>
                     <p detail>Fullstack Developer</p>
@@ -37,8 +37,14 @@
 
 
         </kirby-card>
-        <kirby-card class="cv-section" [hasPadding]="true">Profile</kirby-card>
-        <kirby-card class="cv-section" [hasPadding]="true">Profile</kirby-card>
+        <kirby-card class="cv-section" [hasPadding]="true">
+            <h4>Profile</h4>
+            I am a proactive and collaborative fullstack developer (AP in Computer Science, 2021) with strong
+            problem-solving skills and a passion for delivering robust solutions. Experienced in fullstack development,
+            i thrive in agile teams and enjoys tackling complex challenges. i am known for being self-sufficient and a
+            reliable team player, i am committed to building high-quality software that makes a difference.
+        </kirby-card>
+
         <kirby-card class="cv-section" [hasPadding]="true">
             <h4>Experience</h4>
             <div>
@@ -54,21 +60,11 @@
         <kirby-card class="cv-section" [hasPadding]="true">
             <h4>Skills</h4>
             <div>
-                <kirby-item>
-                    <kirby-label>
-                        <h3>Angular</h3>
-                    </kirby-label>
-                </kirby-item>
-                <kirby-item>
-                    <kirby-label>
-                        <h3>TypeScript</h3>
-                    </kirby-label>
-                </kirby-item>
-                <kirby-item>
-                    <kirby-label>
-                        <h3>Kirby Design System</h3>
-                    </kirby-label>
-                </kirby-item>
+                @for (skill of allSkills; track $index) {
+                <kirby-label>
+                    <kirby-badge>{{ skill }}</kirby-badge>
+                </kirby-label>
+                }
             </div>
         </kirby-card>
     </kirby-page-content>
